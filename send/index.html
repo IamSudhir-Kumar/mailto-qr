@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Email...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Redirecting to email client...</p>
+        <p>If you're not redirected automatically, <a href="mailto:whoissudhirkumar@gmail.com?subject=Hello&body=This%20is%20a%20test" id="mailtoLink">click here</a></p>
+    </div>
+    <script>
+        window.onload = function() {
+            const mailtoUrl = 'mailto:whoissudhirkumar@gmail.com?subject=Hello&body=This%20is%20a%20test';
+            const link = document.getElementById('mailtoLink');
+            link.href = mailtoUrl;
+            
+            // Attempt automatic redirect
+            window.location.href = mailtoUrl;
+        };
+    </script>
+</body>
+</html> 
